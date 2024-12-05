@@ -14,12 +14,11 @@ body {
 .game-container {
     max-width: 90%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1); /* Solid white box */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    word-wrap: break-word; /* Ensure content wraps */
 }
 
 /* Header styling */
@@ -30,7 +29,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Status message styling */
+/* Welcome message */
 #status {
     font-size: 1.2em;
     margin-bottom: 20px;
@@ -85,7 +84,7 @@ button:hover {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     body {
-        font-family: 'Arial', sans-serif; /* Simpler font for better readability */
+        font-family: 'Arial', sans-serif;
     }
 
     .game-container {
