@@ -11,16 +11,16 @@ body {
 }
 
 /* Game container */
-.game-container {
+#game-container {
     max-width: 90%;
     margin: 20px auto;
-    background-color: white; /* Solid white box */
+    background-color: white; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Ensure it sits above the background */
-    position: relative; /* Required for z-index to work */
-    display: inline-block; /* Ensure it wraps the content */
+    z-index: 1; 
+    position: relative; 
+    display: inline-block;
 }
 
 /* Header styling */
@@ -32,10 +32,17 @@ h1 {
 }
 
 /* Welcome message */
-#status {
+#welcome-message {
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #333;
+}
+
+/* Status message */
+#status {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #006400;
 }
 
 /* Word display */
@@ -45,7 +52,7 @@ h1 {
     letter-spacing: 0.1em;
     text-align: center;
     margin: 20px 0;
-    white-space: pre-wrap; /* Prevent overflow for long words */
+    white-space: pre-wrap;
     word-wrap: break-word;
 }
 
@@ -89,7 +96,7 @@ button:hover {
         font-family: 'Arial', sans-serif;
     }
 
-    .game-container {
+    #game-container {
         padding: 15px;
     }
 
@@ -97,8 +104,12 @@ button:hover {
         font-size: 2em;
     }
 
-    #status {
+    #welcome-message {
         font-size: 1em;
+    }
+
+    #status {
+        font-size: 0.9em;
     }
 
     #word-display {
@@ -121,7 +132,7 @@ button:hover {
         font-family: 'Arial', sans-serif;
     }
 
-    .game-container {
+    #game-container {
         padding: 10px;
     }
 
@@ -129,8 +140,12 @@ button:hover {
         font-size: 1.8em;
     }
 
-    #status {
+    #welcome-message {
         font-size: 0.9em;
+    }
+
+    #status {
+        font-size: 0.8em;
     }
 
     #word-display {
