@@ -17,6 +17,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    overflow: hidden;
 }
 
 h1 {
@@ -41,9 +42,11 @@ h1 {
     letter-spacing: 0.1em;
     margin: 20px 0;
     text-align: center;
-    white-space: pre-wrap;
+    white-space: normal;
     word-wrap: break-word;
+    overflow-wrap: break-word;
     max-width: 100%;
+    line-height: 1.2em;
 }
 
 #attempts, #guesses, #status {
