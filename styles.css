@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-image: url('background.jpg');
+    background-image: url('background.jpg'); /* Make sure the image exists */
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -14,13 +14,13 @@ body {
 #game-container {
     max-width: 90%;
     margin: 20px auto;
-    background-color: white; 
+    background-color: white; /* Solid white box */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1; 
-    position: relative; 
-    display: inline-block;
+    z-index: 1; /* Ensure it sits above the background */
+    position: relative; /* Required for z-index to work */
+    display: inline-block; /* Ensure it wraps the content */
 }
 
 /* Header styling */
@@ -52,7 +52,7 @@ h1 {
     letter-spacing: 0.1em;
     text-align: center;
     margin: 20px 0;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* Prevent overflow for long words */
     word-wrap: break-word;
 }
 
@@ -92,10 +92,6 @@ button:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    body {
-        font-family: 'Arial', sans-serif;
-    }
-
     #game-container {
         padding: 15px;
     }
@@ -128,10 +124,6 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    body {
-        font-family: 'Arial', sans-serif;
-    }
-
     #game-container {
         padding: 10px;
     }
