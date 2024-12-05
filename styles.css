@@ -12,12 +12,13 @@ body {
 
 /* Container for the game */
 .game-container {
-    max-width: 600px;
+    max-width: 90%; /* Adjusted for smaller screens */
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Prevents overflow issues */
 }
 
 /* Header styling */
@@ -26,6 +27,7 @@ h1 {
     color: #b22222;
     font-size: 2.5em;
     margin-bottom: 20px;
+    word-wrap: break-word; /* Ensures header fits smaller screens */
 }
 
 /* Status message styling */
@@ -33,12 +35,13 @@ h1 {
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #333;
+    word-wrap: break-word; /* Wraps text properly */
 }
 
 /* Word display */
 #word-display {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
+    font-size: 1.8em;
     letter-spacing: 0.15em;
     text-align: center;
     margin: 20px 0;
@@ -50,6 +53,7 @@ h1 {
 #attempts, #guesses {
     font-size: 1.1em;
     margin: 10px 0;
+    word-wrap: break-word;
 }
 
 /* Input field */
@@ -81,6 +85,10 @@ button:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .game-container {
+        padding: 15px;
+    }
+
     h1 {
         font-size: 2em;
     }
@@ -98,19 +106,31 @@ button:hover {
         width: 100%;
         max-width: 300px;
     }
+
+    #status {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 480px) {
+    .game-container {
+        padding: 10px;
+    }
+
     h1 {
         font-size: 1.8em;
+    }
+
+    #status {
+        font-size: 0.9em;
     }
 
     #word-display {
         font-size: 1.2em;
     }
 
-    .game-container {
-        padding: 15px;
+    #attempts, #guesses {
+        font-size: 1em;
     }
 
     button {
