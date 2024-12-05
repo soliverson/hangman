@@ -3,5 +3,11 @@ name = "hangman"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
-rand = "0.8"
+rand = { version = "0.8", features = ["std", "small_rng"] }
+getrandom = { version = "0.2", features = ["js"] }
+wasm-bindgen = "0.2"
+web-sys = { version = "0.3", features = ["Window", "Document", "HtmlElement", "HtmlInputElement", "KeyboardEvent", "console"] }
