@@ -10,15 +10,17 @@ body {
     color: #333;
 }
 
-/* Container for the game */
+/* Game container */
 .game-container {
     max-width: 90%;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 1); /* Solid white box */
+    background-color: white; /* Solid white box */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    z-index: 1; /* Ensure it sits above the background */
+    position: relative; /* Required for z-index to work */
+    display: inline-block; /* Ensure it wraps the content */
 }
 
 /* Header styling */
