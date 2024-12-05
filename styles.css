@@ -12,13 +12,13 @@ body {
 
 /* Container for the game */
 .game-container {
-    max-width: 90%; /* Adjusted for smaller screens */
+    max-width: 90%;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Prevents overflow issues */
+    overflow: hidden;
 }
 
 /* Header styling */
@@ -27,7 +27,7 @@ h1 {
     color: #b22222;
     font-size: 2.5em;
     margin-bottom: 20px;
-    word-wrap: break-word; /* Ensures header fits smaller screens */
+    word-wrap: break-word;
 }
 
 /* Status message styling */
@@ -35,7 +35,7 @@ h1 {
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #333;
-    word-wrap: break-word; /* Wraps text properly */
+    word-wrap: break-word;
 }
 
 /* Word display */
@@ -90,7 +90,12 @@ button:hover {
     }
 
     h1 {
+        font-family: 'Arial', sans-serif; /* Switch to a simpler font for smaller devices */
         font-size: 2em;
+    }
+
+    #status {
+        font-size: 1em;
     }
 
     #word-display {
@@ -106,10 +111,6 @@ button:hover {
         width: 100%;
         max-width: 300px;
     }
-
-    #status {
-        font-size: 1em;
-    }
 }
 
 @media (max-width: 480px) {
@@ -118,6 +119,7 @@ button:hover {
     }
 
     h1 {
+        font-family: 'Arial', sans-serif; /* Ensure clean, readable font on small screens */
         font-size: 1.8em;
     }
 
