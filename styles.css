@@ -19,6 +19,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    word-wrap: break-word; /* Ensure content wraps */
 }
 
 /* Header styling */
@@ -27,7 +28,6 @@ h1 {
     color: #b22222;
     font-size: 2.5em;
     margin-bottom: 20px;
-    word-wrap: break-word;
 }
 
 /* Status message styling */
@@ -35,17 +35,16 @@ h1 {
     font-size: 1.2em;
     margin-bottom: 20px;
     color: #333;
-    word-wrap: break-word;
 }
 
 /* Word display */
 #word-display {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.8em;
-    letter-spacing: 0.15em;
+    font-size: 2em;
+    letter-spacing: 0.1em;
     text-align: center;
     margin: 20px 0;
-    white-space: pre-wrap;
+    white-space: pre-wrap; /* Prevent overflow for long words */
     word-wrap: break-word;
 }
 
@@ -85,12 +84,15 @@ button:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    body {
+        font-family: 'Arial', sans-serif; /* Simpler font for better readability */
+    }
+
     .game-container {
         padding: 15px;
     }
 
     h1 {
-        font-family: 'Arial', sans-serif; /* Switch to a simpler font for smaller devices */
         font-size: 2em;
     }
 
@@ -100,7 +102,7 @@ button:hover {
 
     #word-display {
         font-size: 1.5em;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.08em;
     }
 
     input[type="text"] {
@@ -114,12 +116,15 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
     .game-container {
         padding: 10px;
     }
 
     h1 {
-        font-family: 'Arial', sans-serif; /* Ensure clean, readable font on small screens */
         font-size: 1.8em;
     }
 
@@ -129,6 +134,8 @@ button:hover {
 
     #word-display {
         font-size: 1.2em;
+        word-wrap: break-word;
+        white-space: pre-wrap;
     }
 
     #attempts, #guesses {
