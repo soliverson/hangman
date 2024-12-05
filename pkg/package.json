@@ -1,0 +1,15 @@
+{
+  "name": "hangman",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "hangman_bg.wasm",
+    "hangman.js",
+    "hangman.d.ts"
+  ],
+  "main": "hangman.js",
+  "types": "hangman.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
