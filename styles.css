@@ -1,157 +1,17 @@
-/* General styling */
 body {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background-image: url('background.jpg'); /* Make sure the image exists */
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-/* Game container */
 #game-container {
-    max-width: 90%;
-    margin: 20px auto;
-    background-color: white; /* Solid white box */
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: white; /* Solid white box */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1; /* Ensure it sits above the background */
-    position: relative; /* Required for z-index to work */
-    display: inline-block; /* Ensure it wraps the content */
-}
-
-/* Header styling */
-h1 {
-    font-family: 'Merry Christmas', cursive;
-    color: #b22222;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* Welcome message */
-#welcome-message {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Status message */
-#status {
-    font-size: 1em;
-    margin-bottom: 20px;
-    color: #006400;
-}
-
-/* Word display */
-#word-display {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
-    letter-spacing: 0.1em;
     text-align: center;
-    margin: 20px 0;
-    white-space: pre-wrap; /* Prevent overflow for long words */
-    word-wrap: break-word;
-}
-
-/* Attempts and guessed letters */
-#attempts, #guesses {
-    font-size: 1.1em;
-    margin: 10px 0;
-    word-wrap: break-word;
-}
-
-/* Input field */
-input[type="text"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    font-size: 1em;
-    margin: 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Buttons */
-button {
-    background-color: #006400;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 5px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #004d00;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #game-container {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    #welcome-message {
-        font-size: 1em;
-    }
-
-    #status {
-        font-size: 0.9em;
-    }
-
-    #word-display {
-        font-size: 1.5em;
-        letter-spacing: 0.08em;
-    }
-
-    input[type="text"] {
-        max-width: 100%;
-    }
-
-    button {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    #game-container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.8em;
-    }
-
-    #welcome-message {
-        font-size: 0.9em;
-    }
-
-    #status {
-        font-size: 0.8em;
-    }
-
-    #word-display {
-        font-size: 1.2em;
-        word-wrap: break-word;
-        white-space: pre-wrap;
-    }
-
-    #attempts, #guesses {
-        font-size: 1em;
-    }
-
-    button {
-        padding: 10px;
-        font-size: 0.9em;
-    }
 }
