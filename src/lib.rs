@@ -38,7 +38,7 @@ impl Hangman {
             .chars()
             .map(|c| {
                 if c == ' ' {
-                    " ".to_string()
+                    " ".to_string() // Space directly for multi-word phrases
                 } else if self.guesses.contains(&c.to_string()) {
                     c.to_string()
                 } else {
@@ -46,7 +46,7 @@ impl Hangman {
                 }
             })
             .collect::<Vec<_>>()
-            .join(" ")
+            .join("")
     }
 
     pub fn attempts_left(&self) -> u8 {
@@ -102,6 +102,14 @@ impl Hangman {
 #[wasm_bindgen(start)]
 pub fn run() -> Result<(), JsValue> {
     let words = vec![
+        "Jesus",
+        "Silent Night",
+        "Manger",
+        "Star of Bethlehem",
+        "Candy Cane",
+        "Reindeer",
+        "Santa Claus",
+        "Christmas Tree",
         "Jesus",
         "Silent Night",
         "Manger",
@@ -417,6 +425,7 @@ pub fn run() -> Result<(), JsValue> {
         "Christmas Hearts United",
         "Yuletide Radiance",
     ];
+
     let document = web_sys::window()
         .and_then(|win| win.document())
         .ok_or_else(|| JsValue::from_str("Could not access document"))?;
