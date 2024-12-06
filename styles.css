@@ -50,24 +50,24 @@ h1 {
 #word-display {
     font-family: 'Courier New', Courier, monospace;
     margin: 20px auto;
-    white-space: nowrap;
+    white-space: nowrap; 
     text-align: center;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%; 
-    font-size: clamp(1em, 2vw, 1.8em);
+    font-size: clamp(1em, 2vw, 1.8em); 
     box-sizing: border-box;
 }
 
 /* Styling for individual letter blocks */
 #word-display span {
-    margin: 0 5px; 
+    margin: 0 5px;
     padding: 5px;
-    font-size: inherit;
+    font-size: inherit; 
     border-bottom: 2px solid #ccc; 
-    display: inline-block; 
+    display: inline-block;
     min-width: 20px; 
     text-align: center;
     box-sizing: border-box;
@@ -138,7 +138,7 @@ button:hover {
     }
 
     #word-display {
-        font-size: clamp(0.8em, 4vw, 1.5em); 
+        font-size: clamp(0.8em, 4vw, 1.5em);
     }
 
     button {
