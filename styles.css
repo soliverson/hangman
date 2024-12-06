@@ -48,10 +48,10 @@ h1 {
 /* Word Display Styling */
 #word-display {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 20px auto;
     white-space: pre-wrap; 
-    word-wrap: break-word;
+    word-wrap:break-word;
     overflow-wrap: break-word;
     line-height: 1.5em;
     display: flex;
