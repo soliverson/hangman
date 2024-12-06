@@ -50,32 +50,36 @@ h1 {
 #word-display {
     font-family: 'Courier New', Courier, monospace;
     margin: 20px auto;
-    white-space: nowrap; 
     text-align: center;
-    overflow: hidden;
     display: flex;
+    flex-wrap: wrap; /* Allows words to wrap onto the next line */
     justify-content: center;
-    align-items: center;
-    max-width: 100%; 
-    font-size: clamp(1em, 2vw, 1.8em); 
+    gap: 10px; /* Adds space between wrapped lines */
+    max-width: 100%;
+    font-size: clamp(1em, 2vw, 1.8em);
+    line-height: 1.5;
     box-sizing: border-box;
 }
 
 /* Styling for individual letter blocks */
-#word-display span {
-    margin: 0 10px; /* Adjusted spacing for better word separation */
+#word-display .letter {
+    margin: 0 2px;
     padding: 5px;
-    font-size: inherit; 
-    border-bottom: 2px solid #ccc; 
+    font-size: inherit;
+    border-bottom: 2px solid #004d00; /* Adds the underline */
     display: inline-block;
-    min-width: 30px; 
+    min-width: 30px; /* Ensures consistent width for each letter */
     text-align: center;
     box-sizing: border-box;
 }
 
-/* Dynamic font size for long words */
-#word-display.long-word {
-    font-size: clamp(0.8em, 1.5vw, 1.5em);
+/* Styling for spaces between words */
+#word-display .space {
+    margin: 0 5px;
+    padding: 5px;
+    display: inline-block;
+    min-width: 10px;
+    border-bottom: none; /* No underline for spaces */
 }
 
 /* Attempts and Guesses Styling */

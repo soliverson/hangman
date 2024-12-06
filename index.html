@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christmas Hangman</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div id="game-container">
@@ -24,9 +24,21 @@
         </div>
         <button id="play-again-button" style="display: none;">Play Again</button>
     </div>
+
     <script type="module">
-        import init from './pkg/hangman.js';
-        window.addEventListener("DOMContentLoaded", () => init());
+        const wasmPath = './pkg/hangman_bg.wasm';
+
+        async function loadWasm() {
+            try {
+                const wasmModule = await import('./pkg/hangman.js');
+                await wasmModule.default(); // Initialize the WASM module
+                console.log('WebAssembly module loaded successfully.');
+            } catch (e) {
+                console.error('Error loading WebAssembly module:', e);
+            }
+        }
+
+        loadWasm();
     </script>
 </body>
 </html>

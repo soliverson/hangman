@@ -38,14 +38,15 @@ impl Hangman {
             .chars()
             .map(|c| {
                 if c == ' ' {
-                    "   ".to_string() // Triple space for better word separation
+                    "<span class='space'></span>".to_string() // Use an HTML placeholder for space
                 } else if self.guesses.contains(&c.to_string()) {
-                    format!("{} ", c) // Add trailing space for each character
+                    format!("<span>{}</span>", c)
                 } else {
-                    "_ ".to_string() // Add trailing space for underscores
+                    "<span>_</span>".to_string()
                 }
             })
-            .collect::<String>()
+            .collect::<Vec<_>>()
+            .join(" ")
     }
 
     pub fn attempts_left(&self) -> u8 {
@@ -101,10 +102,6 @@ impl Hangman {
 #[wasm_bindgen(start)]
 pub fn run() -> Result<(), JsValue> {
     let words = vec![
-        "Jesus",
-        "Silent Night",
-        "Manger",
-        "Star of Bethlehem",
         "Jesus",
         "Jesus",
         "Silent Night",
@@ -462,19 +459,7 @@ pub fn run() -> Result<(), JsValue> {
 
         move || {
             let game = game.borrow();
-            let display_text = game.display_word();
-            word_display.set_text_content(Some(&display_text));
-
-            if word_display.scroll_width() > word_display.client_width() {
-                word_display
-                    .set_attribute("style", "font-size: smaller;")
-                    .unwrap();
-            } else {
-                word_display
-                    .set_attribute("style", "font-size: initial;")
-                    .unwrap();
-            }
-
+            word_display.set_inner_html(&game.display_word());
             attempts_display
                 .set_text_content(Some(&format!("Attempts Left: {}", game.attempts_left())));
             guesses_display.set_text_content(Some(&format!(
