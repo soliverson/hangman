@@ -38,7 +38,7 @@ impl Hangman {
             .chars()
             .map(|c| {
                 if c == ' ' {
-                    " ".to_string() // Space directly for multi-word phrases
+                    " ".to_string() // Keep spaces intact
                 } else if self.guesses.contains(&c.to_string()) {
                     c.to_string()
                 } else {
@@ -46,7 +46,7 @@ impl Hangman {
                 }
             })
             .collect::<Vec<_>>()
-            .join("")
+            .join(" ")
     }
 
     pub fn attempts_left(&self) -> u8 {
@@ -102,6 +102,7 @@ impl Hangman {
 #[wasm_bindgen(start)]
 pub fn run() -> Result<(), JsValue> {
     let words = vec![
+        "Jesus",
         "Jesus",
         "Silent Night",
         "Manger",
@@ -458,7 +459,20 @@ pub fn run() -> Result<(), JsValue> {
 
         move || {
             let game = game.borrow();
-            word_display.set_text_content(Some(&game.display_word()));
+            let display_text = game.display_word();
+            word_display.set_text_content(Some(&display_text));
+
+            // Dynamically adjust font size for long words
+            if word_display.scroll_width() > word_display.client_width() {
+                word_display
+                    .set_attribute("style", "font-size: smaller;")
+                    .unwrap();
+            } else {
+                word_display
+                    .set_attribute("style", "font-size: initial;")
+                    .unwrap();
+            }
+
             attempts_display
                 .set_text_content(Some(&format!("Attempts Left: {}", game.attempts_left())));
             guesses_display.set_text_content(Some(&format!(
