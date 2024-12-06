@@ -8,6 +8,10 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Game Container Styling */
@@ -15,7 +19,7 @@ body {
     max-width: 90%;
     width: 600px;
     background-color: #fff;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -44,6 +48,16 @@ h1 {
     font-size: 1.2em;
     color: #006400;
     margin-bottom: 20px;
+}
+
+/* Canvas Styling for Hangman */
+#hangman-canvas {
+    display: block;
+    margin: 20px auto; /* Center canvas horizontally */
+    background-color: #f4f4f4; /* Optional background color */
+    border: 1px solid #ccc; /* Optional border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: auto;
 }
 
 /* Word Display Styling */
@@ -158,4 +172,11 @@ button:hover {
     input#guess-input {
         font-size: 0.9em;
     }
+    #hangman-canvas {
+        display: block;
+        margin: 20px auto;
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+    }
+    
 }

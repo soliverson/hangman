@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christmas Hangman</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
 </head>
 <body>
     <div id="game-container">
@@ -15,9 +15,13 @@
         </p>
         <p id="status">Start guessing the word below!</p>
         <p id="score">Wins: 0, Losses: 0</p>
+
+        <!-- Hangman Drawing Canvas -->
+        <canvas id="hangman-canvas" width="200" height="250"></canvas>
+
         <div id="game">
             <p id="word-display">_ _ _ _ _ _ _</p>
-            <p id="attempts">Attempts Left: 5</p>
+            <p id="attempts">Attempts Left: 6</p>
             <p id="guesses">Guessed Letters: None</p>
             <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
             <button id="guess-button">Guess</button>
@@ -26,19 +30,8 @@
     </div>
 
     <script type="module">
-        const wasmPath = './pkg/hangman_bg.wasm';
-
-        async function loadWasm() {
-            try {
-                const wasmModule = await import('./pkg/hangman.js');
-                await wasmModule.default(); // Initialize the WASM module
-                console.log('WebAssembly module loaded successfully.');
-            } catch (e) {
-                console.error('Error loading WebAssembly module:', e);
-            }
-        }
-
-        loadWasm();
+        import init from './pkg/hangman.js';
+        window.addEventListener("DOMContentLoaded", () => init());
     </script>
 </body>
 </html>
