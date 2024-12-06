@@ -68,7 +68,7 @@ h1 {
     font-size: inherit; 
     border-bottom: 2px solid #ccc; 
     display: inline-block;
-    min-width: 20px; 
+    min-width: 30px; 
     text-align: center;
     box-sizing: border-box;
 }
