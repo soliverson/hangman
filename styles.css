@@ -63,7 +63,7 @@ h1 {
 
 /* Styling for individual letter blocks */
 #word-display span {
-    margin: 0 5px;
+    margin: 0 10px; /* Adjusted spacing for better word separation */
     padding: 5px;
     font-size: inherit; 
     border-bottom: 2px solid #ccc; 
@@ -71,6 +71,11 @@ h1 {
     min-width: 30px; 
     text-align: center;
     box-sizing: border-box;
+}
+
+/* Dynamic font size for long words */
+#word-display.long-word {
+    font-size: clamp(0.8em, 1.5vw, 1.5em);
 }
 
 /* Attempts and Guesses Styling */
