@@ -48,7 +48,7 @@ h1 {
 /* Word Display Styling */
 #word-display {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
+    font-size: 1em;
     margin: 20px auto;
     white-space: pre-wrap; 
     word-wrap: break-word;
@@ -114,7 +114,7 @@ button:hover {
     }
 
     #word-display span {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     button {
