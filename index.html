@@ -9,20 +9,23 @@
 <body>
     <div id="game-container">
         <h1>Christmas Hangman</h1>
-        <p id="welcome-message">Welcome to Christmas Hangman! Have fun guessing some festive Christmas-themed words. Wishing you a joyful and merry Christmas!</p>
+        <p id="welcome-message">
+            Welcome to Christmas Hangman! Have fun guessing some festive Christmas-themed words. Wishing you a joyful and merry Christmas!
+        </p>
         <p id="status">Start guessing the word below!</p>
+        <p id="score">Wins: 0, Losses: 0</p>
         <div id="game">
             <p id="word-display">_ _ _ _ _ _ _</p>
-            <p id="attempts">Attempts Left: 10</p>
+            <p id="attempts">Attempts Left: 5</p>
             <p id="guesses">Guessed Letters: None</p>
             <input type="text" id="guess-input" maxlength="1" placeholder="Enter a letter">
             <button id="guess-button">Guess</button>
-            <button id="restart-button">Restart Game</button>
         </div>
+        <button id="play-again-button" style="display: none;">Play Again</button>
     </div>
     <script type="module">
         import init from './pkg/hangman.js';
-        init();
+        window.addEventListener("DOMContentLoaded", () => init());
     </script>
 </body>
 </html>

@@ -11,6 +11,8 @@ export class Hangman {
   is_lost(): boolean;
   get_guesses(): string;
   get_word(): string;
+  get_score(): string;
+  reset_game(new_word: string): void;
 }
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
@@ -26,6 +28,8 @@ export interface InitOutput {
   readonly hangman_is_lost: (a: number) => number;
   readonly hangman_get_guesses: (a: number) => [number, number];
   readonly hangman_get_word: (a: number) => [number, number];
+  readonly hangman_get_score: (a: number) => [number, number];
+  readonly hangman_reset_game: (a: number, b: number, c: number) => void;
   readonly run: () => void;
   readonly __wbindgen_exn_store: (a: number) => void;
   readonly __externref_table_alloc: () => number;
@@ -35,7 +39,7 @@ export interface InitOutput {
   readonly __wbindgen_export_5: WebAssembly.Table;
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hb3945fa02d6bbe60: (a: number, b: number) => void;
-  readonly closure16_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure19_externref_shim: (a: number, b: number, c: any) => void;
   readonly __wbindgen_start: () => void;
 }
 

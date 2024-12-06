@@ -1,57 +1,89 @@
+/* General Body Styling */
 body {
-    font-family: 'Mountains of Christmas', cursive;
+    font-family: Arial, sans-serif;
     text-align: center;
-    background: url('background.jpg') no-repeat center center fixed;
+    background-image: url('background.jpg');
     background-size: cover;
-    color: #333;
+    background-position: center;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
+/* Game Container Styling */
 #game-container {
-    display: inline-block;
     max-width: 90%;
-    margin: 20px auto;
+    width: 600px;
+    background-color: #fff;
+    margin: 50px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
+/* Header Styling */
 h1 {
-    font-size: 2.5em;
+    font-family: 'Mountains of Christmas', cursive;
     color: #b22222;
-    margin: 0 0 20px;
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
 }
 
+/* Welcome Message */
 #welcome-message {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Status Styling */
+#status {
     font-size: 1.2em;
-    color: #333;
-    margin: 0 0 20px;
+    color: #006400;
+    margin-bottom: 20px;
 }
 
-#game {
-    font-size: 1.5em;
-}
-
+/* Word Display Styling */
 #word-display {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
-    letter-spacing: 0.1em;
-    margin: 20px 0;
-    text-align: center;
-    white-space: normal;
+    margin: 20px auto;
+    white-space: pre-wrap; 
     word-wrap: break-word;
     overflow-wrap: break-word;
-    max-width: 100%;
-    line-height: 1.2em;
+    line-height: 1.5em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
 }
 
-#attempts, #guesses, #status {
+#word-display span {
+    margin: 0 8px; 
+    padding: 5px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Attempts and Guesses Styling */
+#attempts, #guesses {
+    font-size: 1.2em;
     margin: 10px 0;
+    color: #444;
+}
+
+/* Input and Buttons Styling */
+input#guess-input {
+    padding: 10px;
     font-size: 1em;
+    margin-top: 10px;
+    width: calc(100% - 22px);
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button {
@@ -69,23 +101,28 @@ button:hover {
     background-color: #004d00;
 }
 
-input {
-    padding: 10px;
-    font-size: 1em;
-    margin-top: 10px;
-    width: 50%;
+#scoreboard {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    #word-display {
-        font-size: 1.5em;
+    h1 {
+        font-size: 2em;
+    }
+
+    #word-display span {
+        font-size: 1.2em;
     }
 
     button {
         font-size: 0.9em;
+        padding: 8px 12px;
     }
 
-    input {
+    input#guess-input {
         font-size: 0.9em;
     }
 }
