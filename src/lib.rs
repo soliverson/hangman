@@ -337,7 +337,7 @@ pub fn run() -> Result<(), JsValue> {
         "Christmas Gratitude",
         "Christmas Spirit Shared",
         "Angelic Tidings",
-        "Christmas Candlelight",
+        "Christmas Candle light",
         "Snow Kissed Morning",
         "Holy Christmas",
         "Winter Solstice Glow",
