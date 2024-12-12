@@ -4,7 +4,7 @@ This project is a Christmas Hangman Game that was developed to showcase and prac
 
 The purpose of developing this software was to deepen my understanding of Rust's syntax, tools, and its integration with front-end technologies. By working on this project, I learned more about using Rust for building web applications and I learned how to use Rust with other we web technologies like HTML, CSS, and JavaScript.
 
-[Software Demo Video]https://www.loom.com/share/fd9f55ba21534950af4ccc6d614efa98
+[Software Demo Video]https://www.loom.com/share/fd9f55ba21534950af4ccc6d614efa98?sid=3efe8fcf-338a-4335-a444-e85348a0f2fa
 
 # Development Environment
 
