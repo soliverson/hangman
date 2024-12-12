@@ -4,7 +4,7 @@ use std::io::{self, Write};
 fn main() {
     println!("Welcome to Hangman!");
 
-    let word = "example";
+    let word = "Christmas";
     let max_attempts = 6;
 
     let mut hangman = Hangman::new(word, max_attempts);
